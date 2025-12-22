@@ -25,7 +25,6 @@ function Dashboard() {
 
   return (
     <div>
-      {/* Header */}
       <header style={styles.header}>
         <h2>Dashboard</h2>
 
@@ -53,7 +52,6 @@ function Dashboard() {
         </nav>
       </header>
 
-      {/* Content */}
       <main style={styles.content}>
         {activeTab === "products" && (
           <>
