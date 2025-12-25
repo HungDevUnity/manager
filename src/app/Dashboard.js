@@ -59,17 +59,17 @@ function Dashboard() {
             <table style={styles.table}>
               <thead>
                 <tr>
-                  <th>ID</th>
-                  <th>Tên sản phẩm</th>
-                  <th>Giá</th>
+                  <th style={styles.th}>ID</th>
+                  <th style={styles.th}>Tên sản phẩm</th>
+                  <th style={styles.th}>Giá</th>
                 </tr>
               </thead>
               <tbody>
                 {products.map((p) => (
                   <tr key={p.id}>
-                    <td>{p.id}</td>
-                    <td>{p.name}</td>
-                    <td>{p.price.toLocaleString()} VND</td>
+                    <td style={styles.td}>{p.id}</td>
+                    <td style={styles.td}>{p.name}</td>
+                    <td style={styles.td}>{p.price.toLocaleString()} VND</td>
                   </tr>
                 ))}
               </tbody>
@@ -83,17 +83,17 @@ function Dashboard() {
             <table style={styles.table}>
               <thead>
                 <tr>
-                  <th>ID</th>
-                  <th>Tên</th>
-                  <th>Email</th>
+                  <th style={styles.th}>ID</th>
+                  <th style={styles.th}>Tên</th>
+                  <th style={styles.th}>Email</th>
                 </tr>
               </thead>
               <tbody>
                 {users.map((u) => (
                   <tr key={u.id}>
-                    <td>{u.id}</td>
-                    <td>{u.name}</td>
-                    <td>{u.email}</td>
+                    <td style={styles.td}>{u.id}</td>
+                    <td style={styles.td}>{u.name}</td>
+                    <td style={styles.td}>{u.email}</td>
                   </tr>
                 ))}
               </tbody>
@@ -109,31 +109,57 @@ export default Dashboard;
 
 const styles = {
   header: {
-    padding: "16px",
     backgroundColor: "#2c3e50",
     color: "#fff",
+    padding: "16px 24px",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
   },
+
   nav: {
     display: "flex",
-    gap: "10px",
+    gap: "12px",
   },
+
   button: {
-    padding: "8px 12px",
-    cursor: "pointer",
-    border: "none",
-    borderRadius: "4px",
+    padding: "8px 16px",
     backgroundColor: "#3498db",
     color: "#fff",
+    border: "none",
+    borderRadius: "6px",
+    cursor: "pointer",
+    fontSize: "14px",
+    fontWeight: "500",
+    transition: "0.3s",
   },
+
   content: {
-    padding: "20px",
+    padding: "24px",
+    backgroundColor: "#ecf0f1",
+    minHeight: "calc(100vh - 80px)",
   },
+
   table: {
     width: "100%",
     borderCollapse: "collapse",
-    marginTop: "10px",
+    marginTop: "16px",
+    backgroundColor: "#fff",
+    borderRadius: "8px",
+    overflow: "hidden",
+    boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+  },
+
+  th: {
+    backgroundColor: "#34495e",
+    color: "#fff",
+    padding: "12px",
+    textAlign: "left",
+  },
+
+  td: {
+    padding: "12px",
+    borderBottom: "1px solid #ddd",
   },
 };
+

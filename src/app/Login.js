@@ -54,24 +54,39 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    background: "linear-gradient(135deg, #667eea, #764ba2)",
   },
+
   form: {
-    width: "300px",
-    padding: "20px",
-    border: "1px solid #ddd",
-    borderRadius: "8px",
+    width: "320px",
+    padding: "24px",
+    borderRadius: "10px",
     display: "flex",
     flexDirection: "column",
-    gap: "12px",
-    background: "#caa30aff",
+    gap: "14px",
+    backgroundColor: "#ffffff",
+    boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
   },
+
   input: {
-    padding: "8px",
-    fontSize: "16px",
+    padding: "10px 12px",
+    fontSize: "15px",
+    borderRadius: "6px",
+    border: "1px solid #ccc",
+    outline: "none",
   },
+
   button: {
+    marginTop: "8px",
     padding: "10px",
     fontSize: "16px",
+    fontWeight: "600",
+    borderRadius: "6px",
+    border: "none",
     cursor: "pointer",
+    backgroundColor: "#667eea",
+    color: "#fff",
+    transition: "0.3s",
   },
 };
+
